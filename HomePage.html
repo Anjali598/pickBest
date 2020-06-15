@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pick-Best</title>
+		<link rel="stylesheet" href="css/HomePage.css">
+		<link rel="stylesheet" href="css/w3.css">
+		
+		<script src="js/HomePage.js"></script>
+		<script src="js/w3.js"></script>
+		
+		<link rel="stylesheet" 
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome
+		.min.css">
+	</head>
+	<body onload="display_All()" style="width:100%;height:100%;">
+		<div class="w3-bar w3-teal w3-row" style="width:100%;height:150px;">
+			<a href="#pickbest" class="w3-bar-item w3-button active" 
+			style="font-size:22px">Pickbest</a>
+			<div class="w3-dropdown-hover">
+				<button class="w3-button">cateriges<i class="fa fa-caret-down"></i></button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Templates</a>
+					<a href="#" class="w3-bar-item w3-button">Graphic elements</a>
+					<a href="#" class="w3-bar-item w3-button">Backgrounds</a>
+					<a href="#" class="w3-bar-item w3-button">Illustration</a>
+					<a href="#" class="w3-bar-item w3-button">PowerPoint</a>
+					<a href="#" class="w3-bar-item w3-button">Word</a>
+					<a href="#" class="w3-bar-item w3-button">Excel</a>
+					<a href="#" class="w3-bar-item w3-button">video</a>
+					<a href="#" class="w3-bar-item w3-button">Sound Effects</a>
+					<a href="#" class="w3-bar-item w3-button">Music</a>
+					<a href="#" class="w3-bar-item w3-button">Decors & 3D Models</a>
+					<a href="#" class="w3-bar-item w3-button">E-commerce</a>
+					<a href="#" class="w3-bar-item w3-button">Photo</a>
+					<a href="#" class="w3-bar-item w3-button">UI</a>
+				</div>
+			</div>
+			<a href="#" class="w3-bar-item w3-button" style="color:orange"> <i class="fa 
+			fa-diamond"></i>premium</a>
+			<a href="#" class="w3-bar-item w3-button">Freebies</a>
+			
+			
+			
+			<div class="search-container w3-col m4" >
+				<form action="#">
+					<div class="w3-dropdown-hover">
+						<button class="w3-button template" 
+						style="width:100%;height:28px;padding-top:4px">Backgrounds<i class="fa 
+						fa-caret-down"></i></button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="#" class="w3-bar-item w3-button">All Categories</a>
+							<a href="#" class="w3-bar-item w3-button">Templates</a>
+							<a href="#" class="w3-bar-item w3-button">Graphic Elements</a>
+							<a href="#" class="w3-bar-item w3-button">Illustration</a>
+							<a href="#" class="w3-bar-item w3-button">PowerPoint</a>
+							<a href="#" class="w3-bar-item w3-button">Word</a>
+							<a href="#" class="w3-bar-item w3-button">Excel</a>
+							<a href="#" class="w3-bar-item w3-button">video</a>
+							<a href="#" class="w3-bar-item w3-button">Sound Effects</a>
+							<a href="#" class="w3-bar-item w3-button">Music</a>
+							<a href="#" class="w3-bar-item w3-button">Decors & 3D Models</a>
+							<a href="#" class="w3-bar-item w3-button">E-commerce</a>
+							<a href="#" class="w3-bar-item w3-button">Photo</a>
+							<a href="#" class="w3-bar-item w3-button">UI</a>
+						</div>
+					</div>
+					<input  class="search" type="text" placeholder="Search.." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</div>
+			
+			<div class="w3-container w3-col m4">
+				<form>
+					<div class="language-picker js-language-picker W3-left" 
+					data-trigger-class="btn btn--subtle js-tab-focus">
+						<form action="" class="language-picker__form">
+							<select id="language-picker">
+								<option w3-repeat="languageName in languages">{{languageName}}</option>
+							</select>
+							<i class="fa fa-globe"></i>
+						</form>
+						<i class="fa fa-bell"></i>
+						<button class="w3-button w3-orange">Sign In</button>
+					</div>
+				</form>
+			</div>
+			
+			<div>
+				<h3><span style="color:orange;">100</span> <span>New</span> <span 
+					style="color:green">Free Artworks</span><span>. Available This Week Only</span>
+					</br>
+					<span>You have</span><span style="color:green"> 3</span><span> downloads today. 
+						<span><button class="w3-button w3-border w3-border-blue w3-round-xxlarge" 
+							style="color:blue;background-color:black;border-blue;font-size:12px">Share</button><
+						/span>on Facebook to unlock.</span></h3>
+					</div>
+				</div>
+				
+				
+				
+				<div class="w3-container w3-cell-row w3-black w3-mobile w3-cell-middle" 
+				style="width:100%;height:400px;">
+					
+					<div style="text-align:center;margin-top:10px;">
+						<button id="temp" class="w3-button w3-black w3-border w3-round-large" 
+						>templates</button>
+						<button id="back" class="w3-button w3-black w3-border w3-round-large" 
+						>backgrounds</button>
+						<button id="graphic" class="w3-button w3-black w3-border w3-round-large" 
+						>graphic-elements</button>
+						<button id="powerPoint" class="w3-button w3-black w3-border w3-round-large" 
+						>powerpoint</button>
+						<button id="video" class="w3-button w3-black w3-border w3-round-large" 
+						>video</button>
+						<button id="decorsmodels" class="w3-button w3-black w3-border w3-round-large" 
+						>decors-models</button>
+						<button id="ecommerce" class="w3-button w3-black w3-border w3-round-large" 
+						>e-commerce</button>
+					</div>
+					
+					
+					<div id="tempid" style="width:100%;"></div>
+						<!-- <div class="profile-pic">
+							<img src="D:/website-Task/Pick Best/img/1.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/2.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/3.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/4.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/5.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart" ></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/6.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart" ></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/7.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/8.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/9.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/10.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/11.jpg">
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							<div class="desc">description of the image here</div>
+							</div>
+							
+							<div class="profile-pic" style="text-align:center;">
+							<img src="D:/website-Task/Pick Best/img/12.jpg">
+							
+							<div class="topleft">
+							<a href="#"><i class="fa fa-cog"></i></a>
+							</div>
+							
+							<div class="topright">
+							<a href="#"><i class="fa fa-heart"></i></a>
+							<a href="#"><i class="fa fa-share-alt my-float" ></i></a>
+							<ul>
+							<li><a href="#">
+							<i class="fa fa-facebook my-float"></i>
+							</a></li>
+							<li><a href="#">
+							<i class="fa fa-twitter my-float"></i>
+							</a></li>
+							</ul> 
+							</div>
+							
+							<div class="center">
+							<button class="download"><i class="fa fa-download"></i>Download</button>
+							</div>
+							
+							<div class="bottomright">
+							<i class="fa fa-info"></i>
+							<div class="dropdown-content">
+							<a href="#">formate</a>
+							<a href="#">catogery</a>
+							<a href="#">designed by</a>
+							</div>
+							</div>
+							
+							<div class="desc">description of the image here</div>
+							</div>
+							
+						</div> -->
+					</div>
+					
+					
+					<div class="icon-bar">
+						<a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+						<a href="#" class="google"><i class="fa fa-google"></i></a> 
+						<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+						<a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+						<a href="#" class="close"><i class="fa fa-close"></i></a> 
+					</div>
+					
+					
+					<div class="w3-container w3-light w3-cell-row w3-mobile w3-cell-bottom" style="width:100%;background-color:#333;">
+						<footer>
+							<ul>
+								<h3>Products</h3>
+								<li>Design Templates</li>
+								<li>Office Templates</li>
+								<li>Multimedia Templates</li>
+								<li>Decoration Templates</li>
+								<li>Graphics</li>
+								<li>E-commerce</li>
+								<li>Photo</li>
+							</ul>
+							<ul>
+								<h3>Company</h3>
+								<li>Join Us</li>
+								<li>About Us</li>
+								<li>Blog</li>
+								<li>Advertise With Us</li>
+								<h3>Help</h3>
+								<li>Support FAQ</li>
+								<li>Contact Us</li>
+							</ul>
+							<ul>
+								<h3>Legal</h3>
+								<li>Terms Of Service</li>
+								<li>License Agreement</li>
+								<li>Privacy Policy</li>
+								<li>Copyright information</li>
+								<li>Intellectual Property Rights</li>
+							</ul>
+							
+							<div class="footer-siteinfo">
+								
+								<div class="footer-siteinfo">
+									<div class="fr">
+										<h3>Follow Us</h3>
+										<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+										<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+										<a href="#" class="google"><i class="fa fa-google"></i></a>
+										<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+										<a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+									</div>
+									<button class="button">Buy Perimum Now</button>
+									<h3 style="color:white;font-size:16px;">Unlimited download</h3>
+									<p style="font-size:14px;color:#999;">13,249 Premium Members joined us</p>
+								</div>
+								
+								<div class="ContDisplay">
+									<ul>
+										<li>
+											<h3>828,320</h3>
+											<p>Products</p>
+										</li>
+										
+										<li>
+											<h3>9,084,756</h3>
+											<p>Members</p>
+										</li>
+										
+										<li>
+											<h3>1,452</h3>
+											<p>Added Today</p>
+										</li>
+									</ul>
+									
+									
+								</div>	
+								<h3>Today's New Design</h3>
+							</div>
+							
+							<form>
+								<div class="shell-footer-row subfooter footer-copyright">
+									<span>Copyright&copy; 2020 Pickbest</span>
+									<div>
+										<span>Secure Payment:</span>
+										<i class="fa fa-cc-visa" style="font-size:36px"></i>
+										<i class="fa fa-credit-card" style="font-size:36px"></i>
+										<i class="fa fa-cc-mastercard" style="font-size:36px"></i>
+										<i class="fa fa-cc-paypal" style="font-size:36px"></i>
+										
+									</div>
+								</div>
+							</form>
+						</footer>
+					</div>
+					
+					<script>
+						w3.displayObject("language-picker", language);
+					</script>
+					
+					
+				</body>
+				<script src="D:/website-Task/Pick Best/js/imageScript.js">
+					
+          		</script>
+			</html>													
